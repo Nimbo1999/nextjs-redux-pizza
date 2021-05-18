@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${({theme}) => theme.pallet.white};
         color: ${({ theme }) => theme.pallet.text};
+        letter-spacing: .2px;
     }
 
     button {

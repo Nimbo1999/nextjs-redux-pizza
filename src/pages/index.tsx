@@ -1,7 +1,11 @@
+import Header from '../components/header';
+
+import { IndexContainer } from './styled.index';
+
 export default function Home() {
   return (
-    <div>
-      <p>Hello Word</p>
-    </div>
+    <IndexContainer>
+      <Header />
+    </IndexContainer>
   )
 }
