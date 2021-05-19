@@ -1,9 +1,14 @@
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+import styled, { css } from 'styled-components';
 import { ButtonContainerProps, ButtonVariant } from './button.props';
 
-function getButtonVariant(variant: ButtonVariant): FlattenSimpleInterpolation {
-    if(variant === 'full') return css`
+function getButtonVariant(variant: ButtonVariant) {
+    if (variant === 'full') return css`
         width: 100%;
+    `;
+
+    if (variant === 'small') return css`
+        padding: ${({theme}) => theme.spacing(1)} !important;
+        width: fit-content;
     `;
 
     return css`
@@ -22,7 +27,7 @@ const ButtonContainer = styled.button<ButtonContainerProps>`
     background-color: ${({theme, btnType}) => theme.pallet[btnType]};
     padding: ${({theme}) => theme.spacing(1)} ${({theme}) => theme.spacing(2)};
 
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: ${({theme}) => theme.pallet.white};
     transition: opacity 200ms linear;
 
