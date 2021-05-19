@@ -61,7 +61,7 @@ function RecomendedCard({ pizza, ...rest }: RecomendedCardProps) {
                 </IngredientsWrapper>
             </MainContent>
 
-            <Button type="button" btnType="success">
+            <Button type="button" btnType="success" style={{ fontSize: '1rem', marginLeft: theme.spacing(1) }}>
                 Quero
             </Button>
 
