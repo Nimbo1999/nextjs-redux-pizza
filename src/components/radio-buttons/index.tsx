@@ -3,7 +3,7 @@ import { RadioButtonContainer, RadioInput } from './styled.radio-buttons';
 import { RadioButtonsProps } from './radio-buttons.props';
 import CheckCircle from '../../assets/icons/check-circle';
 
-function RadioButton({ id = 'input-id', value, seleted, children }: RadioButtonsProps) {
+function RadioButton({ id = 'input-id', value, seleted, children, ...props }: RadioButtonsProps) {
     return (
         <RadioButtonContainer htmlFor={ id } selected={ seleted }>
             {children}
@@ -14,6 +14,8 @@ function RadioButton({ id = 'input-id', value, seleted, children }: RadioButtons
                 hidden
                 id={ id }
                 value={ value }
+                type="radio"
+                { ...props }
             />
         </RadioButtonContainer>
     )

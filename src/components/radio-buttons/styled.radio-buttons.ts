@@ -9,9 +9,10 @@ const RadioButtonContainer = styled.label<RadioButtonContainerProps>`
     padding: ${({theme}) => theme.spacing(2)};
     border: 2px solid ${({theme}) => theme.pallet.lightGrey};
     border-radius: ${({theme}) => theme.spacing(1)};
-    transition: opacity 250ms ease-out;
+    transition: all 250ms ease-out;
 
     & > svg {
+        transition: opacity 250ms ease-out;
         opacity: 0;
     }
 
@@ -19,7 +20,6 @@ const RadioButtonContainer = styled.label<RadioButtonContainerProps>`
         border: 2px solid ${({theme}) => theme.pallet.success};
         background-color: rgba(0, 168, 78, 0.1);
         color: ${({theme}) => theme.pallet.success};
-        font-weight: 600;
 
         & > svg {
             opacity: 1;
