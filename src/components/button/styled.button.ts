@@ -11,6 +11,12 @@ function getButtonVariant(variant: ButtonVariant) {
         width: fit-content;
     `;
 
+    if (variant === 'link') return css`
+        background-color: transparent;
+        color: ${({theme}) => theme.pallet.primary};
+        width: fit-content;
+    `;
+
     return css`
         width: fit-content;
     `;

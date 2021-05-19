@@ -9,6 +9,12 @@ const GlobalStyle = createGlobalStyle`
 
     html {
         font-size: 14px;
+        height: 100%;
+        min-height: 100vh;
+    }
+
+    html, body {
+        height: 100%;
     }
 
     body, input, textarea, button {
@@ -24,6 +30,9 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${({theme}) => theme.pallet.white};
         color: ${({ theme }) => theme.pallet.text};
         letter-spacing: .2px;
+        & > div {
+            height: 100%;
+        }
     }
 
     button, a {
