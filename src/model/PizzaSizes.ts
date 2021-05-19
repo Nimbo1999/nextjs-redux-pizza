@@ -1,0 +1,1 @@
+export type PizzaSizes = 'small' | 'medium' | 'large' | 'family';

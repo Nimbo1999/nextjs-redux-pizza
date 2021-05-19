@@ -26,8 +26,10 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: .2px;
     }
 
-    button {
+    button, a {
         cursor: pointer;
+        appearance: none;
+        outline: none;
     }
 
     a {

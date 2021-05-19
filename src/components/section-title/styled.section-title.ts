@@ -5,6 +5,8 @@ import { TitleProps } from './section-title.props';
 const SectionTitleContainer = styled.div`
     display: flex;
     align-items: center;
+
+    margin-bottom: ${({theme}) => theme.spacing(2)};
 `;
 
 const Title = styled.h3<TitleProps>`
