@@ -14,6 +14,7 @@ function getButtonVariant(variant: ButtonVariant): FlattenSimpleInterpolation {
 const ButtonContainer = styled.button<ButtonContainerProps>`
     display: flex;
     align-items: center;
+    justify-content: center;
 
     height: fit-content;
     border: none;

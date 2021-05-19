@@ -6,6 +6,7 @@ import Calendar from '../../assets/icons/calendar';
 
 import SectionTitle from '../section-title';
 import RecomendedCard from '../recomended-card';
+import Button from '../button';
 
 function HomeContent() {
     const theme = useTheme();
@@ -27,6 +28,17 @@ function HomeContent() {
                     size: 'large'
                 }}
             />
+
+            <Button
+                btnType="secondary"
+                variant="full"
+                style={{
+                    color: theme.pallet.title,
+                    margin: `${theme.spacing(3)} 0px`
+                }}
+            >
+                Montar pizza
+            </Button>
         </HomeContentContainer>
     );
 }

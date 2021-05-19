@@ -2,6 +2,7 @@ import { useTheme } from 'styled-components';
 
 import Tag from '../tag';
 import Button from '../button';
+import PizzaPointPreview from '../pizza-point-preview';
 
 import {
     RecomendedCardContainer, MainContent, MainContentHeader, PizzaNameAndSize, IngredientsWrapper
@@ -63,6 +64,10 @@ function RecomendedCard({ pizza, ...rest }: RecomendedCardProps) {
             <Button type="button" btnType="success">
                 Quero
             </Button>
+
+            <PizzaPointPreview>
+                {pizza.points}
+            </PizzaPointPreview>
         </RecomendedCardContainer>
     );
 }
