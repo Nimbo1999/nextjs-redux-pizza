@@ -6,7 +6,7 @@ Pequeno projeto feito com [Next.js](https://nextjs.org/), utilizando o template 
 
 * Infelizmente o projeto só está disponivel em uma resolução de tela para dispositivos móveis, não foi possível criar o design
 para desktop em 3 dias;
-* O design do projeto está seguindo o protótipo que foi criado com o figma nesse [Link](https://www.figma.com/file/JBdZl8S06AweaCG43UQLHW/Pizza-Form?node-id=0%3A1).
+* O design do projeto está seguindo o protótipo que foi criado com o figma e pode ser encontrado nesse [Link](https://www.figma.com/file/JBdZl8S06AweaCG43UQLHW/Pizza-Form?node-id=0%3A1).
 
 ## Instale em sua máquina
 
