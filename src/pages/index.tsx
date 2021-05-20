@@ -3,7 +3,7 @@ import HomeContent from '../components/home-content';
 
 import { PizzaOfTheDayContextProvider } from '../context/PizzaOfTheDayContext';
 
-import { IndexContainer } from './styled.index';
+import { IndexContainer } from '../styles/styled.index';
 
 export default function Home() {
   return (
