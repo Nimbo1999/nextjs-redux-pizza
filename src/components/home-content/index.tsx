@@ -9,9 +9,18 @@ import SectionTitle from '../section-title';
 import RecomendedCard from '../recomended-card';
 import Button from '../button';
 
+import { usePizzaOfTheDayContext } from '../../context/PizzaOfTheDayContext';
+import { useEffect } from 'react';
+
 function HomeContent() {
     const theme = useTheme();
     const router = useRouter();
+
+    const pizzaOfTheDay = usePizzaOfTheDayContext();
+
+    useEffect(() => {
+        pizzaOfTheDay.getPizzaOfTheDay();
+    }, []);
 
     return (
         <HomeContentContainer>
@@ -20,15 +29,8 @@ function HomeContent() {
             </SectionTitle>
 
             <RecomendedCard
-                pizza={{
-                    id: 'token',
-                    imageUrl: 'pizza1.jpg',
-                    ingredients: ['Mussarela', 'Provolone', 'Mussarela', 'Parmesão', 'Catupiry', 'Orégano'],
-                    name: '4 Queijos',
-                    points: 50,
-                    price: 37,
-                    size: 'large'
-                }}
+                pizza={pizzaOfTheDay.pizzaOfTheDay}
+                onGetPoints={pizzaOfTheDay.getPizzaPoints}
             />
 
             <Button

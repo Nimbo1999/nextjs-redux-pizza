@@ -27,7 +27,9 @@ const Progress = styled.div<ProgressProps>`
     height: 100%;
     background: ${({theme}) => theme.pallet.secondary};
     border-radius: 0px ${({theme}) => theme.spacing(1)} ${({theme}) => theme.spacing(1)} 0px;
-    width: ${({ percent = 0 }) => `${percent}%`};
+    width: 100%;
+    max-width: ${({ percent = 0 }) => `${percent}%`};
+    transition: max-width 500ms ease-out;
 `;
 
 export { HeaderNavigationContainer, ProgressWrapper, Progress };

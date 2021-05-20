@@ -3,13 +3,17 @@ import { MonteSuaPizzaContainer } from './styled.monte-sua-pizza';
 import HeaderNavigation from '../../components/header-navigation';
 import MontePizzaContent from '../../components/monte-pizza-content';
 
+import { PizzaContextProvider } from '../../context/PizzaFormContext';
+
 function MonteSuaPizzaPage() {
     return (
-        <MonteSuaPizzaContainer>
-            <HeaderNavigation />
+        <PizzaContextProvider>
+            <MonteSuaPizzaContainer>
+                <HeaderNavigation />
 
-            <MontePizzaContent />
-        </MonteSuaPizzaContainer>
+                <MontePizzaContent />
+            </MonteSuaPizzaContainer>
+        </PizzaContextProvider>
     );
 }
 

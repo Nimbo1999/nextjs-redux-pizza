@@ -9,8 +9,7 @@ import {
 } from './styled.recomended-card';
 import { RecomendedCardProps } from './recomended-card.props';
 
-function RecomendedCard({ pizza, ...rest }: RecomendedCardProps) {
-    console.log(pizza);
+function RecomendedCard({ pizza, onGetPoints, ...rest }: RecomendedCardProps) {
     const theme = useTheme();
 
     if (!pizza) return (
@@ -41,6 +40,8 @@ function RecomendedCard({ pizza, ...rest }: RecomendedCardProps) {
         }
     }
 
+    if (!pizza) return <></>;
+
     return (
         <RecomendedCardContainer {...rest} imageUrl={ formatImage() }>
             <MainContent>
@@ -61,7 +62,7 @@ function RecomendedCard({ pizza, ...rest }: RecomendedCardProps) {
                 </IngredientsWrapper>
             </MainContent>
 
-            <Button type="button" btnType="success" style={{ fontSize: '1rem', marginLeft: theme.spacing(1) }}>
+            <Button type="button" btnType="success" onClick={onGetPoints}>
                 Quero
             </Button>
 

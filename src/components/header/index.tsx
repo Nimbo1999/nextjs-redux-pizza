@@ -4,11 +4,14 @@ import {
     HeaderContainer, TitleContainer, MainContent, PointsContainer, PointsMain
 } from './styled.header';
 
+import { usePizzaOfTheDayContext } from '../../context/PizzaOfTheDayContext';
+
 import PizzaLogo from '../../assets/pizza-logo';
 import CoinsPiles from '../../assets/icons/coins-piles';
 
 function Header() {
     const theme = useTheme();
+    const { points } = usePizzaOfTheDayContext();
 
     return (
         <HeaderContainer>
@@ -28,7 +31,7 @@ function Header() {
                 <PointsMain>
                     <p>Pizza points</p>
 
-                    <p><span>0</span> Pontos</p>
+                    <p><span>{points}</span> Pontos</p>
                 </PointsMain>
             </PointsContainer>
         </HeaderContainer>
